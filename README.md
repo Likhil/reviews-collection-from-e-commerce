@@ -25,12 +25,11 @@ Chromedriver
 
 # Approach/methodology
 We chose mobiles as the category for this project. We did scrape all the relevant information for mobiles needed from couple of websites named flipkart.com and 91mobiles.com
-1. Flipkart:
-
+1. Source1:
 The Flipkart E-commerce site is of dynamic webpages which is highly developed.
 
 To scrap the information for each mobile, we need to go to the respective url for that mobile, which manually takes time. So we automated this using selenium and wrote a python script(Flipkart_reviews.ipymb), which did the job for us.
-# Plan for flipkart: 
+# Plan for Source1: 
 
 we send the input to search key as "smartphone" through the script, which listed all the phones with almost 217 pages.
 
@@ -44,11 +43,11 @@ All the loops are controlled by selenium and chromedriver
 
 This file finally contains all the information for each mobile phone in json format.
 
-2. 91mobiles.com:
+2. Source2:
 
 91mobiles.com is also an E-commerce website , where we can find the reviews for the product from amazon. This is a dynamic website, which is highly developed. This is a JavaScript webpage
 
-# Plan for 91mobiles.com:
+# Plan for Source2:
 Here, the mobile phones are categorized according to their brands. So we used that as an advantage.
 
 We scraped and collected the links for the brands along with brand names.
@@ -227,9 +226,9 @@ other files/datasets are stored as an intermediate purpose.
 
 This dataset can be used in various ways. It is a pool of information for the specific phone.
 
-flipkart_data(JSON)--contains all the phones which are scraped from flipkart site with name as their key.
+Source1(JSON)--contains all the phones which are scraped from Source1 site with name as their key.
 
-amazon_data(JSON)--contains all the phones which are scraped from 91 mobiles site with name as their key and amazon reviews in their values.
+Source2(JSON)--contains all the phones which are scraped from Source2 site with name as their key and Source2 reviews in their values.
 
 flip_amz(JSON)--contains the phones which are in both the datasets, and having both the reviews from flipkart and amazon.
 
